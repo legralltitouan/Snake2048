@@ -10,12 +10,12 @@ Retour     : Aucun (procedure)
 */
 void viderGrille(Partie *p)
 {
-    int lig;
-    int col;
+    int ligne;
+    int colonne;
 
-    for (lig = 0; lig < TAILLE_MAX; lig++) {
-        for (col = 0; col < TAILLE_MAX; col++) {
-            p->grille[lig][col] = 0;
+    for (ligne = 0; ligne < TAILLE_MAX; ligne++) {
+        for (colonne = 0; colonne < TAILLE_MAX; colonne++) {
+            p->grille[ligne][colonne] = 0;
         }
     }
 }
@@ -48,14 +48,14 @@ Retour     : Nombre total de cases completement libres sur la grille
 */
 int compterCasesVides(const Partie *p)
 {
-    int lig;
-    int col;
+    int ligne;
+    int colonne;
     int compteur = 0;
 
-    for (lig = 0; lig < p->taille; lig++) {
-        for (col = 0; col < p->taille; col++) {
-            if (p->grille[lig][col] == 0 &&
-                indiceSegmentSurCase(&p->serpent, lig, col) == -1) {
+    for (ligne = 0; ligne < p->taille; ligne++) {
+        for (colonne = 0; colonne < p->taille; colonne++) {
+            if (p->grille[ligne][colonne] == 0 &&
+                indiceSegmentSurCase(&p->serpent, ligne, colonne) == -1) {
                 compteur++;
             }
         }
@@ -72,13 +72,13 @@ Retour     : Nombre de tuiles actuellement posees sur le plateau
 */
 int compterTuilesSurGrille(const Partie *p)
 {
-    int lig;
-    int col;
+    int ligne;
+    int colonne;
     int nbTuiles = 0;
 
-    for (lig = 0; lig < p->taille; lig++) {
-        for (col = 0; col < p->taille; col++) {
-            if (p->grille[lig][col] > 0) {
+    for (ligne = 0; ligne < p->taille; ligne++) {
+        for (colonne = 0; colonne < p->taille; colonne++) {
+            if (p->grille[ligne][colonne] > 0) {
                 nbTuiles++;
             }
         }
@@ -121,8 +121,8 @@ int placerUneTuileAleatoire(Partie *p)
     int nbVides = compterCasesVides(p);
     int choixCase;
     int indexCourant = 0;
-    int lig;
-    int col;
+    int ligne;
+    int colonne;
 
     if (nbVides <= 0) {
         return 0;
@@ -130,12 +130,12 @@ int placerUneTuileAleatoire(Partie *p)
 
     choixCase = rand() % nbVides;
 
-    for (lig = 0; lig < p->taille; lig++) {
-        for (col = 0; col < p->taille; col++) {
-            if (p->grille[lig][col] == 0 &&
-                indiceSegmentSurCase(&p->serpent, lig, col) == -1) {
+    for (ligne = 0; ligne < p->taille; ligne++) {
+        for (colonne = 0; colonne < p->taille; colonne++) {
+            if (p->grille[ligne][colonne] == 0 &&
+                indiceSegmentSurCase(&p->serpent, ligne, colonne) == -1) {
                 if (indexCourant == choixCase) {
-                    p->grille[lig][col] = tirerValeurTuileAleatoire();
+                    p->grille[ligne][colonne] = tirerValeurTuileAleatoire();
                     return 1;
                 }
                 indexCourant++;
