@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1794994658 source:d:\projet\snake2048\affichage.c
+
+1794994658 source:d:\projet\snake2048\console.c
+
+1794994658 source:d:\projet\snake2048\grille.c
+
+1794994658 source:d:\projet\snake2048\jeu.c
+
+1794994658 source:d:\projet\snake2048\sauvegarde.c
+
+1794994658 source:d:\projet\snake2048\serpent.c
+
+1794996102 source:d:\projet\snake2048\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1794995318 d:\projet\snake2048\menu.h
+
+1794996140 source:d:\projet\snake2048\main.c
+	<stdio.h>
+	<conio.h>
+	"menu.h"
+
