@@ -1,3 +1,4 @@
+#ifndef GRILLE_H
 #define GRILLE_H
 #include "structures.h"
 
