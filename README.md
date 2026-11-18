@@ -3,7 +3,7 @@ Ouvrez Snake2048.cbp et vérifiez que Debug → Rebuild compile sans ajouter de 
 Mettez-vous d’accord sur les données partagées dans structures.h : Segment, Serpent, Partie, les directions et les états de fin.
 Gardez une seule version de référence du projet. Idéalement, utilisez Git ; sinon, désignez une personne qui rassemble les fichiers et évitez de vous envoyer chacun une archive complète modifiée.
 Convenez que serpent.corps[0] est la tête et que les indices suivants vont vers la queue.
-Personne 1 — grille et démarrage d’une partie
+Titouan — grille et démarrage d’une partie
 Fichiers principaux : grille.c, grille.h, et coordination de structures.h.
 
 À faire dans cet ordre :
@@ -16,7 +16,7 @@ Vérifier que la génération de tuiles s’arrête correctement si le plateau e
 Tester les tailles minimale et maximale, ainsi que l’initialisation d’une nouvelle partie.
 À coordonner avec la personne 2 : les fonctions de grille appelées par les déplacements et les collisions.
 
-Personne 2 — serpent et règles du jeu
+Ulysse — serpent et règles du jeu
 Fichiers principaux : serpent.c, serpent.h, jeu.c, jeu.h.
 
 À faire dans cet ordre :
@@ -32,7 +32,7 @@ Détecter victoire, défaites et absence de déplacements possibles.
 Tester séparément les déplacements, collisions et fusions.
 À coordonner avec la personne 3 : les codes de direction et les actions clavier que le jeu reçoit.
 
-Personne 3 — clavier, affichage et menus
+Adam — clavier, affichage et menus
 Fichiers principaux : console.c, console.h, affichage.c, affichage.h, menu.c, menu.h.
 
 À faire dans cet ordre :
@@ -45,7 +45,7 @@ Gérer le choix de taille et les messages de victoire, défaite et sauvegarde.
 Tester l’affichage sur les grilles 5 × 5 et 10 × 10.
 Commandes prévues en jeu : flèches pour diriger, S pour sauvegarder, P pour pause, Q pour revenir au menu.
 
-Personne 4 — sauvegarde, intégration et tests finaux
+Yassine — sauvegarde, intégration et tests finaux
 Fichiers principaux : sauvegarde.c, sauvegarde.h. Elle ou il s’occupe aussi de l’intégration finale, mais ne modifie pas seul les règles du jeu.
 
 À faire dans cet ordre :
